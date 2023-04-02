@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #9b59b6;
+	font-family: "Open Sans", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	.container {
+		background-color: white;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.3);
+		overflow: hidden;
+		width: 400px;
+		max-width: 100%;
+		.header {
+			border-bottom: 1px solid #f0f0f0;
+			background-color: #f7f7f7;
+			padding: 20px 40px;
+			h2 {
+				margin: 0;
+			}
+		}
+		.form {
+			padding: 30px 40px;
+			.form-control {
+				margin-bottom: 10px;
+				padding-bottom: 20px;
+				position: relative;
+				label {
+					display: inline-block;
+					margin-bottom: 5px;
+				}
+				input {
+					border: 2px solid #f0f0f0;
+					border-radius: 4px;
+					display: block;
+					font-family: inherit;
+					font-size: 14px;
+					padding: 10px;
+					width: 100%;
+					&:focus {
+						outline: 0;
+						border-color: #777;
+					}
+				}
+				i {
+					visibility: hidden;
+					position: absolute;
+					top: 40px;
+					right: 10px;
+				}
+
+				&.success input {
+					border-color: #2ecc71;
+				}
+				&.success i.fa-circle-check {
+					color: #2ecc71;
+					visibility: visible;
+				}
+				&.error i.fa-circle-exclamation {
+					color: #e74c3c;
+					visibility: visible;
+				}
+				small {
+					color: #e74c3c;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					visibility: hidden;
+				}
+				&.error small {
+					visibility: visible;
+				}
+			}
+			button {
+				background-color: #8e44ad;
+				border: 2px solid #8e44ad;
+				border-radius: 4px;
+				color: #fff;
+				display: block;
+				font-family: inherit;
+				font-size: 16px;
+				padding: 10px;
+				margin-top: 20px;
+				width: 100%;
+			}
+		}
+	}
+}
